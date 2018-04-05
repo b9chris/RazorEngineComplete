@@ -1,0 +1,12 @@
+*.suo
+*.user
+/.vs
+/ConservX/.well-known
+**/bin
+**/obj
+/packages/*
+!/packages/repositories.config
+/ConservX/u
+/ConservX/b
+*.db
+*.css.map

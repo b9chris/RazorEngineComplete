@@ -1,0 +1,24 @@
+﻿@model RazorEngineMvc.ViewModels.TestEmailViewModel
+@{
+	var vm = Model;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+	font: 10pt Arial;
+}
+</style>
+</head>
+<body>
+
+<h1>Welcome, @vm.FirstName!</h1>
+
+<p>You've finally joined us! You should be receiving this email at @vm.Email - if not, let us know.</p>
+
+@Html.Partial("+EmailFooter")
+
+</body>
+</html>

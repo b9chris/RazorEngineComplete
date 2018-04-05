@@ -1,0 +1,24 @@
+﻿@model Brass9.Web.Notify.MailResult
+@{
+	var mailResult = Model;
+	string title = mailResult.Success ? "Mail Sent" : "Mail Failed";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@title</title>
+</head>
+<body>
+<h1>@title</h1>
+
+@if (mailResult.Exceptions != null)
+{
+	foreach (var ex in mailResult.Exceptions)
+	{
+<p>@ex.Message</p>
+	}
+}
+</body>
+</html>
